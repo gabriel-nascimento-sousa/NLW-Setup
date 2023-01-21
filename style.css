@@ -1,0 +1,90 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+}
+button{
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 1px solid #8b5cf6;
+    background-color: transparent;
+    color: white;
+     display: flex;
+     align-items: center;/*Só funciona se houver um display: flex na linha de cima*/
+    gap: 12px;  /*espaçamento entre os elementos quando se usa o display flex*/
+
+     font-family: 'Inter';  /* Familia */
+     font-weight: 600;      /* peso / espessura */
+     font-size: 16px;       /* tamanho */
+     line-height: 125%;     /*altura da linha*/
+}
+#form-habits{
+    display: flex;
+    padding: 182px 48px 48px;
+    width: fit-content; /*encaixa o conteudo na largura*/
+}
+.habits{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+}
+.habit{
+    width: 64px;
+    height: 64px;
+
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.days{
+    display: flex;
+    gap: 48px;
+    margin-left: 32px;
+}
+.day{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+.day div{
+    margin-top: 8px;
+    font-family: 'Roboto Mono';
+    line-height: 125%;
+    text-align: center;
+    color: #a1a1aa;
+}
+input{
+    appearance: none; /* Remove a aparencia */
+    -webkit-appearance: none;   /*compatibilidade com o navegadorpara remover a aparencia */
+    width: 64px;
+    height: 64px;
+    background-color: #18181B;
+    border: 2px solid #27272A;
+    border-radius: 8px;
+}   
+/*Pseudo-selector*/
+input:checked{
+    background-color: #8b5cf6;
+    border: 2px solid #a78bfa;
+}
+@media(max-width: 570px){
+    button div{
+        display: none;
+    }
+}
